@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="À propos | Evan Zivic" description="À propos de Evan Zivic">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="À propos"
+				tagline="Merci de votre visite. Lisez ci-dessous pour en savoir plus sur moi et mon parcours."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/evan-famille.png"
+					alt="Evan zivic avec sa famille"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Ma personne</h2>
+				<div class="content">
+					<p>
+						Bonjour à tous, je suis Evan, né le 28 juillet 2006, et je souhaite partager ma passion pour le monde numérique tout en soulignant l'importance de mes principes et liens familiaux.
+					</p>
+					<br>
+					<p>
+						Ma curiosité pour l'informatique me conduit à explorer constamment de nouvelles découvertes et à m'impliquer dans des projets innovants qui stimulent ma curiosité. Au-delà de l'utilisation quotidienne, je trouve une réelle satisfaction à plonger dans le monde complexe de la technologie.
+					</p>
+					<br>
+					<p>
+						Malgré l'impression parfois introvertie que je peux donner, surtout avec des personnes que je ne connais pas bien, ne vous méprenez pas. Une fois à l'aise, je me révèle être une personne pleine d'idées et d'enthousiasme. <br><br> On pourrait me qualifier de "faux timide", épanoui davantage au sein de projets personnels. Travailler sur mes propres initiatives est l'une de mes activités préférées, me permettant de mettre en pratique mes compétences informatiques et de donner vie à mes idées. En parallèle, je tiens à souligner que, malgré mon immersion dans le monde numérique, mes principes et mes liens familiaux restent au cœur de mon identité. 
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Scolaire</h2>
+				<div class="content">
+					<p>Collège privée Saint Pierre en Isle, avec brevet mention bien. <br>Second général au lycée privée Saint Joseph la Salle, en filière général et technologique depuis la première dans un bac STMG</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Compétences</h2>
+				<div class="content">
+					<p>Gestion de Projet, Analyse de Données, Communication, Économie et Droit, Veille Technologique
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
