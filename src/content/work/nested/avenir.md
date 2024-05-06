@@ -1,10 +1,10 @@
 ---
 title: L'avenir
-publishDate: 2023-07-27 16:56:00
+publishDate: 2023-12-27 16:56:00
 img: /assets/avenir.svg
 img_alt: Bannière de serveur discord sur le thème de l'avenir
 description: |
-  Bannière de serveur discord sur le thème de l'avenir
+  Bannière de serveur discord sur le thème de l'avenir.
 tags:
   - Design
   - Bannière

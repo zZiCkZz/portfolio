@@ -11,7 +11,7 @@ tags:
   - Travil en groupe
 ---
 
-## PANDABUY
+## COMPTABILITE
 
 Ficher Excel de comptabilité, crée en Octobre 2023, il permet de calculer précisement grâce à l'outil excel les dépenses/recettes rentrer dans chaque catégorie. De manière automatique et organisée, des cases indépendantes calculs les recettes/dépenses de chaque personne et en fait ensuite un calcul général.
 
